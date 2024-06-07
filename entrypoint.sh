@@ -7,6 +7,8 @@ set -e
 echo "Cloning the repository..."
 git clone $REPO_URL /repo
 
+sleep 10
+
 # Navigate into the repository directory
 cd /repo
 
