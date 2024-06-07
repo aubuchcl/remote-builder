@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sleep 10
 # Exit immediately if a command exits with a non-zero status
 set -e
 
@@ -7,7 +8,6 @@ set -e
 echo "Cloning the repository..."
 git clone $REPO_URL /repo
 
-sleep 10
 echo "done with repo clone and sleep"
 buildkitd --addr unix:///run/buildkit/buildkitd.sock &
 # Navigate into the repository directory
