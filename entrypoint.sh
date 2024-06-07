@@ -1,5 +1,5 @@
 #!/bin/bash
-buildkitd --addr unix:///run/buildkit/buildkitd.sock &
+
 # Exit immediately if a command exits with a non-zero status
 set -e
 
@@ -8,7 +8,7 @@ echo "Cloning the repository..."
 git clone $REPO_URL /repo
 
 sleep 10
-
+buildkitd --addr unix:///run/buildkit/buildkitd.sock &
 # Navigate into the repository directory
 cd /repo
 
