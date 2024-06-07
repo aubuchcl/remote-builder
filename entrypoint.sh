@@ -8,6 +8,7 @@ echo "Cloning the repository..."
 git clone $REPO_URL /repo
 
 sleep 10
+echo "done with repo clone and sleep"
 buildkitd --addr unix:///run/buildkit/buildkitd.sock &
 # Navigate into the repository directory
 cd /repo
